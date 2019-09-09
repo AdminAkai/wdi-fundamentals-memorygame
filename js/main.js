@@ -46,6 +46,7 @@ function flipCard() {
 function createBoard() {
     for (var i = 0; i < cards.length; i++) {
         var cardElement = document.createElement('img');
+        cardElement.className = "cards";
         cardElement.setAttribute('src', 'images/back.png');
         cardElement.setAttribute('data-id', i);
         cardElement.addEventListener('click', flipCard);
@@ -53,5 +54,19 @@ function createBoard() {
     }
 }
 
+function resetBoard() {
+    var removeCards = document.getElementById('game-board');
+    while (removeCards.hasChildNodes()) {
+        removeCards.removeChild(removeCards.firstChild);
+        cardsInPlay.pop();
+    }
+    createBoard();
+}
+
+function newGame() {
+    document.getElementById('reset').addEventListener('click', resetBoard);
+}
+
 
 createBoard();
+newGame();
