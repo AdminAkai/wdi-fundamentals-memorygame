@@ -84,7 +84,7 @@ input[type=button] {
     padding: 4px 36px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 20px;
     font-weight: 650;
     letter-spacing: .08em;
@@ -133,4 +133,15 @@ input[type=button] {
 .name {
     color: #F15B31;
     font-weight: 700;
+}
+
+#totalpoints {
+    font-family: Raleway;
+    color: #F15B31;
+    font-size: 35px;
+}
+
+.totalpoints {
+    padding-top: 30px;
+    position: relative;
 }
