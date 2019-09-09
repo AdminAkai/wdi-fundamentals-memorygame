@@ -23,12 +23,20 @@ const cards = [
 
 const cardsInPlay = [];
 
+function resetCardsInPlay() {
+    for (i = 0; i < 2; i++) {
+        cardsInPlay.pop();
+    }
+}
+
 function checkForMatch() {
     if (cardsInPlay.length === 2) {
         if (cardsInPlay[0] === cardsInPlay[1]) {
             alert("You found a match!");
+            resetCardsInPlay();
         } else {
             alert("Sorry, try again.");
+            resetCardsInPlay();
         }
     }
 }
