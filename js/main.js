@@ -23,6 +23,13 @@ const cards = [
 
 const cardsInPlay = [];
 
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1)); // Fisher-Yates shuffle solution
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
 function resetCardsInPlay() {
     for (i = 0; i < 2; i++) {
         cardsInPlay.pop();
@@ -52,6 +59,7 @@ function flipCard() {
 }
 
 function createBoard() {
+    shuffle(cards);
     for (var i = 0; i < cards.length; i++) {
         var cardElement = document.createElement('img');
         cardElement.className = "cards";
