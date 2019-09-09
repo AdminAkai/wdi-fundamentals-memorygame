@@ -62,7 +62,7 @@ main {
 }
 
 img {
-	margin: 40px 8px 8px 0;
+	margin: 32px 8px 8px 0;
 }
 
 footer {
@@ -144,4 +144,9 @@ input[type=button] {
 .totalpoints {
     padding-top: 30px;
     position: relative;
+}
+
+#game {
+    display: block;
+    float: center;
 }
